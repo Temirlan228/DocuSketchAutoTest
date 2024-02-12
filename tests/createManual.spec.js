@@ -15,8 +15,8 @@ test('newTest', async({page})=> {
     const createUserButton = page.frameLocator('//*[@id="content"]/iframe').locator('body > app-root > app-user-contracts-page > div.container-fluid.py-4 > app-user-contracts-filters > form > div.d-flex.align-items-center.mb-4 > a');
     await createUserButton.click();
 
-    await page.frameLocator('//*[@id="content"]/iframe').locator('#first-name').fill(firstName)
-    await page.frameLocator('//*[@id="content"]/iframe').locator('#last-name').fill(lastName)
+    await page.frameLocator('//*[@id="content"]/iframe').locator('#first-name').fill(firstName);
+    await page.frameLocator('//*[@id="content"]/iframe').locator('#last-name').fill(lastName);
 
 
     const frameHandle = await page.waitForSelector('//*[@id="content"]/iframe');
@@ -28,9 +28,9 @@ test('newTest', async({page})=> {
 
 
 
-    await page.frameLocator('//*[@id="content"]/iframe').locator('#email').fill(email)
-    await page.frameLocator('//*[@id="content"]/iframe').locator('#password').fill(password)
-    await page.frameLocator('//*[@id="content"]/iframe').locator('#personal-phone').fill(phoneNumber)
+    await page.frameLocator('//*[@id="content"]/iframe').locator('#email').fill(email);
+    await page.frameLocator('//*[@id="content"]/iframe').locator('#password').fill(password);
+    await page.frameLocator('//*[@id="content"]/iframe').locator('#personal-phone').fill(phoneNumber);
 
 
     const dropdownSelector2 = await frame.waitForSelector("body > app-root > app-user > div > app-user-internal > form > section > div:nth-child(7) > app-select > div > ng-select > div > div > div.ng-input");
@@ -41,12 +41,12 @@ test('newTest', async({page})=> {
     const dropdownSelector3 = await frame.waitForSelector("body > app-root > app-user > div > app-user-internal > form > section > div:nth-child(8) > app-select > div > ng-select");
     await dropdownSelector3.click();
     await frame.waitForSelector('.option-name');
-    await frame.click('.option-name', { text: 'En' })
+    await frame.click('.option-name', { text: 'En' });
 
 
     await page.waitForTimeout(5000);
 
-    await page.frameLocator('//*[@id="content"]/iframe').locator('body > app-root > app-user > div > app-user-internal > form > div > div > button').click()
+    await page.frameLocator('//*[@id="content"]/iframe').locator('body > app-root > app-user > div > app-user-internal > form > div > div > button').click();
 
 
 
